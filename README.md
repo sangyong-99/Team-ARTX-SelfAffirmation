@@ -1,4 +1,4 @@
-# ARTX-KELLYCHOI
+# ARTX-SelfAffirmation
 ![ex_screenshot](./img/artx_logo_gray.svg)
 ## ARTX Git Workflow
 ### 브랜치카테고리
@@ -59,4 +59,3 @@ git commit -m "커밋메세지"
 git push
 ```
 - pr한다
-# Team-ARTX-SelfAffirmation
