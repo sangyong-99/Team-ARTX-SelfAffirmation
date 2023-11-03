@@ -1,3 +1,51 @@
+////
+////  ContentView.swift
+////  ARTX-SelfAffirmation
+////
+////  Created by 신상용 on 11/2/23.
+////
+//
+//import SwiftUI
+//
+//struct ContentView: View {
+//    
+//    @Environment(ThemeManager.self) private var themeManager
+//    var model = SelfCardViewModel()
+//    
+//    var body: some View {
+//        GeometryReader { geometry in
+//            let size = geometry.size
+//            ZStack {
+//                VStack(spacing: 15) {
+//                    Text("좋은 아침이에요")
+//                        .font(.system(.largeTitle, design: .serif, weight: .bold))
+//                        .frame(maxWidth: .infinity, alignment: .center)
+//                        .padding(.top, 10)
+//                    
+//                    SelfCardView(model: model)
+//                        .frame(height: size.height * 0.6 + 30)
+//                    
+//                    Menu("Card Feature") {
+//                        Button("Shuffle", action: { model.shuffleCard() })
+//                        Button("Change 1st Card BG", action: { model.changeimage(0, to: SelfCardImage.allCases.randomElement()!.rawValue) })
+//                        
+//                    }
+//                }
+//            }
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//        }
+//    }
+//}
+//
+//#Preview {
+//    ContentView()
+//        .environment(ThemeManager())
+//}
+
+
+
+
+
 //
 //  ContentView.swift
 //  ARTX-SelfAffirmation
@@ -7,37 +55,41 @@
 
 import SwiftUI
 
+//struct ContentView: View {
+//    var body: some View {
+//        VStack {
+//            HStack{
+//                Spacer()
+//            }
+//            Spacer()
+//        }
+//        .background(Color.red)
+//    }
+//}
+
+
+
 struct ContentView: View {
-    
-    @Environment(ThemeManager.self) private var themeManager
-    var model = SelfCardViewModel()
-    
     var body: some View {
-        GeometryReader { geometry in
-            let size = geometry.size
-            ZStack {
-                VStack(spacing: 15) {
-                    Text("좋은 아침이에요")
-                        .font(.system(.largeTitle, design: .serif, weight: .bold))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.top, 10)
-                    
-                    SelfCardView(model: model)
-                        .frame(height: size.height * 0.6 + 30)
-                    
-                    Menu("Card Feature") {
-                        Button("Shuffle", action: { model.shuffleCard() })
-                        Button("Change 1st Card BG", action: { model.changeimage(0, to: SelfCardImage.allCases.randomElement()!.rawValue) })
-                        
-                    }
-                }
+        VStack {
+            NavigationView {
+                NavigationLink("환경설정 링크", destination: SettingView())
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
         }
+//        .onAppear(perform: {
+//            for family in UIFont.familyNames {
+//              print(family)
+//
+//              for sub in UIFont.fontNames(forFamilyName: family) {
+//                print("====> \(sub)")
+//              }
+//            }
+//            
+//        })
     }
 }
 
 #Preview {
     ContentView()
-        .environment(ThemeManager())
 }

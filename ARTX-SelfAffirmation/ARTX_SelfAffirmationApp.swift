@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ARTX_SelfAffirmationApp: App {
-    
+    @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     @State private var themeManager = ThemeManager()
     
     var body: some Scene {
