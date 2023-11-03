@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ARTX_SelfAffirmationApp: App {
+    
+    @State private var themeManager = ThemeManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(themeManager)
         }
     }
 }
