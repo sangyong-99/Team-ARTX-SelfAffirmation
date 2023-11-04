@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingTableView: View {
+struct SettingAlarmView: View {
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     
     var body: some View {
@@ -36,7 +36,7 @@ struct SettingTableView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingTableView()
+        SettingAlarmView()
             .previewLayout(.fixed(width: 341, height: 44))
             .padding()
     }
