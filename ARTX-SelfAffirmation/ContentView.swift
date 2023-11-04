@@ -20,27 +20,26 @@ struct ContentView: View {
             GeometryReader { geometry in
                 let size = geometry.size
                 ZStack {
-                    VStack(spacing: 36) {
-                        VStack(spacing: 16) {
-                            Text(model.text.mainTitle)
-                                .modifier(mainTitle())
-                            Text(model.text.subTitle)
-                                .modifier(bodyRegular())
-                        }
+                    VStack(spacing: 16) {
+                        Text(model.text.mainTitle)
+                            .modifier(mainTitle())
+                        Text(model.text.subTitle)
+                            .modifier(bodyRegular())
                         SelfCardView(currentCard: $currentCard)
-                            .frame(height: size.height * 0.6 + 30)
+                            .frame(height: size.height * 0.61 + 50)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
                 .onAppear(perform: model.updateTitleText)
                 .background {
+                    Color(.black)
                     Image(currentCard?.image ?? "bg1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .overlay(themeManager.selectedTheme.bgDimed)
-                        .blur(radius: 20)
-                        .padding(-50)
+                        .blur(radius: 6)
+                        .padding(-20)
                         .animation(.easeOut(duration: 1), value: currentCard)
                 }
             }
