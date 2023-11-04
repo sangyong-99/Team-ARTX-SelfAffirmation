@@ -49,6 +49,7 @@ struct ContentView: View {
                         .overlay(themeManager.selectedTheme.bgDimed)
                         .blur(radius: 6)
                         .padding(-20)
+                        .drawingGroup()
                         .animation(.easeOut(duration: 1), value: currentCard)
                 }
             }
