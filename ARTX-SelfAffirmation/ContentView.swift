@@ -16,17 +16,26 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            //            NavigationLink("환경설정 링크", destination: SettingView())
             GeometryReader { geometry in
                 let size = geometry.size
                 ZStack {
                     VStack(spacing: 16) {
+                        HStack {
+                            Spacer()
+                            NavigationLink(destination: SettingView()) {
+                                Image(systemName: "gearshape")
+                                    .modifier(iconExLarge())
+                                    .foregroundStyle(themeManager.selectedTheme.textLightSecondary)
+                                    .padding(.trailing, 27)
+                            }
+                        }
                         Text(model.text.mainTitle)
                             .modifier(mainTitle())
                         Text(model.text.subTitle)
                             .modifier(bodyRegular())
                         SelfCardView(currentCard: $currentCard)
                             .frame(height: size.height * 0.61 + 50)
+                            .padding(.bottom, 45)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -52,26 +61,3 @@ struct ContentView: View {
     ContentView()
         .environment(ThemeManager())
 }
-
-
-
-
-// MARK: - 환경설정 불러오는 코드
-
-//import SwiftUI
-//
-//
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            NavigationView {
-//                NavigationLink("환경설정 링크", destination: SettingView())
-//            }
-//
-//        }
-//    }
-//}
-//
-//#Preview {
-//    ContentView()
-//}
