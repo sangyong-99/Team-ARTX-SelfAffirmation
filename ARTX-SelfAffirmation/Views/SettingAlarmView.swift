@@ -16,7 +16,7 @@ struct SettingAlarmView: View {
             HStack {
                 Toggle(isOn: $isAlarmActive, label: {
                     Text("알림 켜기")
-                        .modifier(bodyRegular())
+                        .modifier(systemRegular())
                         .foregroundColor(.textDarkPrimary)
                 })
                 .toggleStyle(SwitchToggleStyle(tint: Color.pointPrimary))
@@ -34,7 +34,7 @@ struct SettingAlarmView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SettingAlarmView_Previews: PreviewProvider {
     static var previews: some View {
         SettingAlarmView()
             .previewLayout(.fixed(width: 341, height: 44))

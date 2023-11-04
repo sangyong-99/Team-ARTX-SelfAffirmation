@@ -20,7 +20,14 @@
 		5EB8E68A2AF51E3A00FD54C9 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E6882AF51E3A00FD54C9 /* Pretendard-SemiBold.ttf */; };
 		5EB8E68B2AF51E3A00FD54C9 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E6892AF51E3A00FD54C9 /* Pretendard-Regular.ttf */; };
 		5EB8E68C2AF51E4100FD54C9 /* NotoSerifKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB8E6872AF51DFA00FD54C9 /* NotoSerifKR-Regular.otf */; };
-		5EB8E68F2AF53ED000FD54C9 /* SettingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E68E2AF53ED000FD54C9 /* SettingTableView.swift */; };
+		5EB8E68F2AF53ED000FD54C9 /* SettingAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E68E2AF53ED000FD54C9 /* SettingAlarmView.swift */; };
+		5EB8E6912AF553F200FD54C9 /* SettingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6902AF553F200FD54C9 /* SettingInfoView.swift */; };
+		5EB8E6932AF5DAC600FD54C9 /* VersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6922AF5DAC600FD54C9 /* VersionView.swift */; };
+		5EB8E6962AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6952AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift */; };
+		5EB8E6982AF5ECD900FD54C9 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6972AF5ECD900FD54C9 /* WidgetSettingView.swift */; };
+		5EB8E69A2AF5EE5100FD54C9 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */; };
+		5EB8E69C2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */; };
+		5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */; };
 		B470F03D2AF38A8D00D521B5 /* ThemeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */; };
 		B470F03F2AF38A9600D521B5 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F03E2AF38A9600D521B5 /* ThemeManager.swift */; };
 		B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0402AF38A9B00D521B5 /* Theme.swift */; };
@@ -46,7 +53,14 @@
 		5EB8E6882AF51E3A00FD54C9 /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
 		5EB8E6892AF51E3A00FD54C9 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
 		5EB8E68D2AF51E6700FD54C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5EB8E68E2AF53ED000FD54C9 /* SettingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableView.swift; sourceTree = "<group>"; };
+		5EB8E68E2AF53ED000FD54C9 /* SettingAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAlarmView.swift; sourceTree = "<group>"; };
+		5EB8E6902AF553F200FD54C9 /* SettingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfoView.swift; sourceTree = "<group>"; };
+		5EB8E6922AF5DAC600FD54C9 /* VersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionView.swift; sourceTree = "<group>"; };
+		5EB8E6952AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		5EB8E6972AF5ECD900FD54C9 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
+		5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionView.swift; sourceTree = "<group>"; };
+		5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionRowView.swift; sourceTree = "<group>"; };
 		B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollection.swift; sourceTree = "<group>"; };
 		B470F03E2AF38A9600D521B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B470F0402AF38A9B00D521B5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -86,6 +100,7 @@
 		5E9BA29D2AF362C0004C24A9 /* ARTX-SelfAffirmation */ = {
 			isa = PBXGroup;
 			children = (
+				5EB8E6942AF5E86700FD54C9 /* Extension */,
 				5EB8E68D2AF51E6700FD54C9 /* Info.plist */,
 				5EB8E6812AF51A8000FD54C9 /* AppFontFile */,
 				5EB8E6802AF51A7A00FD54C9 /* Fonts */,
@@ -114,7 +129,12 @@
 			children = (
 				5E9BA2AF2AF36549004C24A9 /* View.swift */,
 				5E9BDFEF2AF504D60000542E /* SettingView.swift */,
-				5EB8E68E2AF53ED000FD54C9 /* SettingTableView.swift */,
+				5EB8E6972AF5ECD900FD54C9 /* WidgetSettingView.swift */,
+				5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */,
+				5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */,
+				5EB8E6922AF5DAC600FD54C9 /* VersionView.swift */,
+				5EB8E68E2AF53ED000FD54C9 /* SettingAlarmView.swift */,
+				5EB8E6902AF553F200FD54C9 /* SettingInfoView.swift */,
 				B470F0472AF38ECB00D521B5 /* SelfCardView.swift */,
 			);
 			path = Views;
@@ -155,6 +175,15 @@
 				5EB8E6822AF51A9400FD54C9 /* AppFont.swift */,
 			);
 			path = AppFontFile;
+			sourceTree = "<group>";
+		};
+		5EB8E6942AF5E86700FD54C9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5EB8E6952AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift */,
+				5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B470F03B2AF38A5F00D521B5 /* Resources */ = {
@@ -251,14 +280,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9BA2B62AF3656F004C24A9 /* ViewModel.swift in Sources */,
+				5EB8E6982AF5ECD900FD54C9 /* WidgetSettingView.swift in Sources */,
 				B470F0452AF38C7400D521B5 /* SelfCard.swift in Sources */,
+				5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */,
 				5EB8E6832AF51A9400FD54C9 /* AppFont.swift in Sources */,
 				B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */,
 				5E9BA2A12AF362C0004C24A9 /* ContentView.swift in Sources */,
-				5EB8E68F2AF53ED000FD54C9 /* SettingTableView.swift in Sources */,
+				5EB8E6912AF553F200FD54C9 /* SettingInfoView.swift in Sources */,
+				5EB8E68F2AF53ED000FD54C9 /* SettingAlarmView.swift in Sources */,
 				5E9BA29F2AF362C0004C24A9 /* ARTX_SelfAffirmationApp.swift in Sources */,
+				5EB8E6932AF5DAC600FD54C9 /* VersionView.swift in Sources */,
+				5EB8E69A2AF5EE5100FD54C9 /* NavigationBarModifier.swift in Sources */,
 				B470F0432AF38AA500D521B5 /* Color+Util.swift in Sources */,
 				B470F04A2AF3DDE800D521B5 /* SelfCardViewModel.swift in Sources */,
+				5EB8E6962AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift in Sources */,
+				5EB8E69C2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift in Sources */,
 				B470F03D2AF38A8D00D521B5 /* ThemeCollection.swift in Sources */,
 				5E9BDFF02AF504D60000542E /* SettingView.swift in Sources */,
 				5E9BA2B02AF36549004C24A9 /* View.swift in Sources */,

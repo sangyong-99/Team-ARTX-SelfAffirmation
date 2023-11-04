@@ -8,11 +8,58 @@
 import SwiftUI
 
 struct WidgetSettingView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    init() {
+        NavigationBarModifier().navigationColorSetting()
+        
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.clear.overlay {
+                Image("SettingBG")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            
+            VStack(alignment: .leading, spacing: 0) {
+                Divider()
+                    .frame(height: 0.5)
+                    .overlay {
+                        Color.tabLine
+                    }
+                    .offset(y: -0.5)
+                
+                Image("Empty")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(26)
+                
+                WidgetSettingDiscriptionView()
+                    .padding(.leading, 30)
+                
+                
+                Spacer()
+                
+                VersionView()
+                
+            }
+            
+            
+        }
+        .navigationTitle("위젯 설정 방법")
+        .modifier(NavigationBarModifier())  //navigation bar 설정
+        
+        
     }
 }
 
+
 #Preview {
-    WidgetSettingView()
+    NavigationView{
+        WidgetSettingView()
+    }
 }

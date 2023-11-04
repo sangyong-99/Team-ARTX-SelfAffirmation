@@ -12,6 +12,7 @@ struct SettingView: View {
     
     init() {
         NavigationBarModifier().navigationColorSetting()
+        
     }
     
     var body: some View {
@@ -25,6 +26,13 @@ struct SettingView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 0) {
+                    Divider()
+                        .frame(height: 0.5)
+                        .overlay {
+                            Color.tabLine
+                        }
+                        .offset(y: -0.5)
+                        
                     HStack(spacing: 0) {
                         Image(systemName: "bell.badge")
                             .modifier(iconRegular())
@@ -43,7 +51,7 @@ struct SettingView: View {
                         .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
                     
                     
-                    SettingTableView()
+                    SettingAlarmView()
                         .padding(.horizontal, 26)
                         .padding(.top, 18)
                         
@@ -69,52 +77,25 @@ struct SettingView: View {
                         .foregroundColor(.textDarkPrimary)
                         .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
                     
-                    
+                    SettingInfoView()
+                        .padding(.top, 18)
                     
                     Spacer()
+                    
+                    VersionView()
+                        
                 }
                 
             }
+            .navigationTitle("환경 설정")
             .modifier(NavigationBarModifier())  //navigation bar 설정
-        
+            
         
     }
 }
 
-struct NavigationBarModifier: ViewModifier {
-    @Environment(\.presentationMode) var presentationMode
-    
-    func body(content: Content) -> some View {
-        
-        content
-            .navigationTitle("환경 설정")
-            .font(.system(size: 17, weight: .semibold))
-            .navigationBarBackButtonHidden()
-            .navigationBarItems(leading:
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "chevron.left") // Custom back button image
-                        .font(.system(size: 17, weight: .semibold))
-                        .foregroundColor(.textDarkPrimary) // Custom back button color
-                }
-            )
-            .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    func navigationColorSetting() {
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = UIColor.tabBg // 20% 투명도 지정
-        appearance.backgroundEffect = nil
-        
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.textDarkPrimary]
-        appearance.shadowColor = .tabLine
-        
-    
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-}
+
+
 
 
 #Preview {

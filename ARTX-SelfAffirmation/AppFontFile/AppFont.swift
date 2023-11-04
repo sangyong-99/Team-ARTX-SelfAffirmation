@@ -108,3 +108,21 @@ struct caption: ViewModifier {
             .kerning(-0.3)
     }
 }
+
+struct systemRegular: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom("SFPro-Regular", size: 17))
+            .lineSpacing(22)
+            .kerning(-0.4)
+    }
+}
+
+struct systemBold: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom("SFPro-Semibold", size: 17))
+            .lineSpacing(22)
+            .kerning(0.0)
+    }
+}
