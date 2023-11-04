@@ -28,6 +28,7 @@
 		5EB8E69A2AF5EE5100FD54C9 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */; };
 		5EB8E69C2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */; };
 		5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */; };
+		B42D5E392AF6C874001107FA /* View+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D5E382AF6C874001107FA /* View+Util.swift */; };
 		B46F7AA32AF65AA90031B422 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F7AA22AF65AA90031B422 /* TitleText.swift */; };
 		B46F7AA52AF65C2C0031B422 /* TitleTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F7AA42AF65C2C0031B422 /* TitleTextViewModel.swift */; };
 		B470F03D2AF38A8D00D521B5 /* ThemeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */; };
@@ -63,6 +64,7 @@
 		5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionView.swift; sourceTree = "<group>"; };
 		5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionRowView.swift; sourceTree = "<group>"; };
+		B42D5E382AF6C874001107FA /* View+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Util.swift"; sourceTree = "<group>"; };
 		B46F7AA22AF65AA90031B422 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		B46F7AA42AF65C2C0031B422 /* TitleTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextViewModel.swift; sourceTree = "<group>"; };
 		B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollection.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				5EB8E6952AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift */,
 				5EB8E6992AF5EE5100FD54C9 /* NavigationBarModifier.swift */,
+				B42D5E382AF6C874001107FA /* View+Util.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				B470F0452AF38C7400D521B5 /* SelfCard.swift in Sources */,
 				5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */,
 				5EB8E6832AF51A9400FD54C9 /* AppFont.swift in Sources */,
+				B42D5E392AF6C874001107FA /* View+Util.swift in Sources */,
 				B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */,
 				5E9BA2A12AF362C0004C24A9 /* ContentView.swift in Sources */,
 				5EB8E6912AF553F200FD54C9 /* SettingInfoView.swift in Sources */,

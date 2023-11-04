@@ -30,16 +30,25 @@ struct SelfCardView: View {
                             Image(card.image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .offset(x: -minX)
                                 .frame(width: proxy.size.width * 2.2)
                                 .frame(width: cardSize.width, height: cardSize.height)
                                 .overlay {
                                     overlayView(card)
                                 }
+                                .offset(x: -minX)
                                 .clipShape(.rect(cornerRadius: 22))
                                 .shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 16)
+                                .longPressAvailable()
+                                .gesture(
+                                    LongPressGesture(minimumDuration: 0.5, maximumDistance: 10)
+                                        .onEnded { _ in
+                                            print("\(currentCard!.image) LongPressed ")
+                                        }
+                                )
+                                .highPriorityGesture(TapGesture()
+                                    .onEnded { print("\(currentCard!.image) Tapped") }
+                                )
                         }
-                        
                         .padding(.horizontal, -4)
                         .frame(width: size.width - 72, height: size.height - 50)
                         .scrollTransition(.interactive, axis: .horizontal) { view, phase in view
@@ -51,6 +60,9 @@ struct SelfCardView: View {
                 .padding(.horizontal, 36)
                 .scrollTargetLayout()
                 .frame(height: size.height, alignment: .top)
+                .onAppear {
+                    currentCard = model.selfCards[0]
+                }
             }
             .scrollTargetBehavior(.viewAligned)
             .scrollIndicators(.hidden)
@@ -70,9 +82,6 @@ struct SelfCardView: View {
             Text(card.name)
                 .modifier(namenote())
                 .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
-            //            Button(action: { print("yes") }, label: {
-            //                Text("Button")
-            //            })
         })
     }
 }
