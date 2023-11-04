@@ -1,10 +1,10 @@
+////
+////  ContentView.swift
+////  ARTX-SelfAffirmation
+////
+////  Created by 신상용 on 11/2/23.
+////
 //
-//  ContentView.swift
-//  ARTX-SelfAffirmation
-//
-//  Created by 신상용 on 11/2/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -41,3 +41,26 @@ struct ContentView: View {
     ContentView()
         .environment(ThemeManager())
 }
+
+
+
+
+// MARK: - 환경설정 불러오는 코드
+
+//import SwiftUI
+//
+//
+//struct ContentView: View {
+//    var body: some View {
+//        VStack {
+//            NavigationView {
+//                NavigationLink("환경설정 링크", destination: SettingView())
+//            }
+//            
+//        }
+//    }
+//}
+//
+//#Preview {
+//    ContentView()
+//}
