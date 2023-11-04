@@ -10,30 +10,26 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(ThemeManager.self) private var themeManager
-    var model = SelfCardViewModel()
+    var model = TitleTextViewModel()
     
     var body: some View {
         GeometryReader { geometry in
             let size = geometry.size
             ZStack {
-                VStack(spacing: 15) {
-                    Text("좋은 아침이에요")
-                        .font(.system(.largeTitle, design: .serif, weight: .bold))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.top, 10)
-                    
-                    SelfCardView(model: model)
-                        .frame(height: size.height * 0.6 + 30)
-                    
-                    Menu("Card Feature") {
-                        Button("Shuffle", action: { model.shuffleCard() })
-                        Button("Change 1st Card BG", action: { model.changeimage(0, to: SelfCardImage.allCases.randomElement()!.rawValue) })
-                        
+                VStack(spacing: 36) {
+                    VStack(spacing: 16) {
+                        Text(model.text.mainTitle)
+                            .modifier(mainTitle())
+                        Text(model.text.subTitle)
+                            .modifier(bodyRegular())
                     }
+                    SelfCardView()
+                        .frame(height: size.height * 0.6 + 30)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .onAppear(perform: model.updateTitleText)
     }
 }
 

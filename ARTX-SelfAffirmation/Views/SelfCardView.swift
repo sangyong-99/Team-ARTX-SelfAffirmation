@@ -10,7 +10,7 @@ import SwiftUI
 struct SelfCardView: View {
     
     @Environment(ThemeManager.self) private var themeManager
-    var model: SelfCardViewModel
+    var model = SelfCardViewModel()
     
     var body: some View {
         
@@ -38,13 +38,13 @@ struct SelfCardView: View {
                                 .clipShape(.rect(cornerRadius: 22))
                                 .shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 16)
                         }
+                        .padding(.horizontal, -4)
                         .frame(width: size.width - 72, height: size.height - 30)
                         .scrollTransition(.interactive, axis: .horizontal) { view, phase in view
                                 .scaleEffect(phase.isIdentity ? 1 : 0.85)
                                 .opacity(phase.isIdentity ? 1 : 0.7)
                         }
                     }
-                    .padding(.horizontal, -4)
                 }
                 .padding(.horizontal, 36)
                 .scrollTargetLayout()
@@ -61,13 +61,12 @@ struct SelfCardView: View {
         
         VStack(alignment: .center, spacing: 30, content: {
             Text(card.title)
-                .font(.system(.title2, design: .serif, weight: .medium))
+                .modifier(quoteTitle())
                 .multilineTextAlignment(.center)
                 .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
             
             Text(card.name)
-                .font(.callout)
-                .fontWeight(.semibold)
+                .modifier(namenote())
                 .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
         })
     }
