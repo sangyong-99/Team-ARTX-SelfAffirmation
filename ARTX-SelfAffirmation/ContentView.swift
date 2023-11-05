@@ -42,7 +42,6 @@ struct ContentView: View {
                 
                 .onAppear(perform: model.updateTitleText)
                 .background {
-                    Color(.black)
                     Image(currentCard?.image ?? "bg1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)

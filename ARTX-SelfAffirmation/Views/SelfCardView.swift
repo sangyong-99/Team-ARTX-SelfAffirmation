@@ -50,7 +50,7 @@ struct SelfCardView: View {
                                 )
                         }
                         .padding(.horizontal, -4)
-                        .frame(minWidth: size.width - 72, minHeight: size.height - 50)
+                        .frame(width: size.width - 72, height: size.height - 50)
                         .scrollTransition(.interactive, axis: .horizontal) { view, phase in view
                                 .scaleEffect(phase.isIdentity ? 1 : 0.85)
                                 .opacity(phase.isIdentity ? 1 : 0.7)
