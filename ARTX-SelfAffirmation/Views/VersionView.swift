@@ -8,30 +8,27 @@
 import SwiftUI
 
 struct VersionView: View {
+    @Environment(ThemeManager.self) private var themeManager
+    
     var body: some View {
         HStack(spacing: 0) {
             Spacer()
             VStack(spacing: 0) {
-                Text("버전 정보 Ver 1.0")
-                    .modifier(VersionViewModifier())
-                Text("Developed by Team ARTX")
-                    .modifier(VersionViewModifier())
+                Group {
+                    Text("버전 정보 Ver 1.0")
+                    Text("Developed by Team ARTX")
+                }
+                .modifier(caption())
+                .foregroundColor(themeManager.selectedTheme.textDarkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(0)
             }
             Spacer()
         }
     }
 }
 
-struct VersionViewModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .modifier(caption())
-            .foregroundColor(.textDarkSecondary)
-            .multilineTextAlignment(.center)
-            .lineSpacing(0)
-    }
-}
-
 #Preview {
     VersionView()
+        .environment(ThemeManager())
 }
