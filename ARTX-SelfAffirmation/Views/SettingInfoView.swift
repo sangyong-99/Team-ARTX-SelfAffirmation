@@ -8,45 +8,50 @@
 import SwiftUI
 
 struct SettingInfoView: View {
+    @Environment(ThemeManager.self) private var themeManager
+    
     var body: some View {
         VStack (spacing: 0) {
             
             NavigationLink(destination: WidgetSettingView()) {
-                SettingInfoRowView().view(cellTitle: "위젯 설정 방법")
+                SettingInfoRowView(cellTitle: "위젯 설정 방법")
             }
             
             Divider()
-                .overlay(Color.tabLine)
+                .overlay(themeManager.selectedTheme.tabLine)
                 .padding(.leading, 16)
             
             Button(action: {
                 print("궁금")
             }, label: {
-                SettingInfoRowView().view(cellTitle: "궁금한 점이 있으신가요?")
+                SettingInfoRowView(cellTitle: "궁금한 점이 있으신가요?")
             })
             
         }
-        .background(Color.tabBg)
+        .background(themeManager.selectedTheme.tabBg)
         .cornerRadius(10)
         .padding(.horizontal, 26)
         
     }
 }
 
-struct SettingInfoRowView {
-    @ViewBuilder
-    func view(cellTitle: String) -> some View {
-        HStack (spacing: 0) {
-            Text(cellTitle)
-                .modifier(systemRegular())
-                .foregroundColor(.textDarkPrimary)
-            Spacer()
-            Image(systemName: "chevron.right")
-                .modifier(systemRegular())
-                .foregroundColor(.textDarkSecondary)
-        }
-        .frame(height: 44)
-        .padding(.horizontal, 16)
+struct SettingInfoRowView: View {
+    @Environment(ThemeManager.self) private var themeManager
+    
+    var cellTitle: String
+    
+    var body: some View {
+            HStack (spacing: 0) {
+                Text(cellTitle)
+                    .modifier(systemRegular())
+                    .foregroundStyle(themeManager.selectedTheme.textDarkPrimary)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .modifier(systemRegular())
+                    .foregroundColor(themeManager.selectedTheme.textDarkSecondary)
+            }
+            .frame(height: 44)
+            .padding(.horizontal, 16)
     }
 }
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WidgetSettingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(ThemeManager.self) private var themeManager
     
     init() {
         NavigationBarModifier().navigationColorSetting()
@@ -29,7 +30,7 @@ struct WidgetSettingView: View {
                 Divider()
                     .frame(height: 0.5)
                     .overlay {
-                        Color.tabLine
+                        themeManager.selectedTheme.tabLine
                     }
                     .offset(y: -0.5)
                 
@@ -43,9 +44,6 @@ struct WidgetSettingView: View {
                 
                 
                 Spacer()
-                
-                VersionView()
-                
             }
             
             
@@ -61,5 +59,6 @@ struct WidgetSettingView: View {
 #Preview {
     NavigationView{
         WidgetSettingView()
+            .environment(ThemeManager())
     }
 }
