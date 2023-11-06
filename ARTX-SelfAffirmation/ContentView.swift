@@ -10,29 +10,49 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(ThemeManager.self) private var themeManager
-    var model = SelfCardViewModel()
+    var model = TitleTextViewModel()
+    
+    @State private var currentCard: SelfCard?
     
     var body: some View {
-        GeometryReader { geometry in
-            let size = geometry.size
-            ZStack {
-                VStack(spacing: 15) {
-                    Text("좋은 아침이에요")
-                        .font(.system(.largeTitle, design: .serif, weight: .bold))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.top, 10)
-                    
-                    SelfCardView(model: model)
-                        .frame(height: size.height * 0.6 + 30)
-                    
-                    Menu("Card Feature") {
-                        Button("Shuffle", action: { model.shuffleCard() })
-                        Button("Change 1st Card BG", action: { model.changeimage(0, to: SelfCardImage.allCases.randomElement()!.rawValue) })
-                        
+        NavigationStack {
+            GeometryReader { geometry in
+                let size = geometry.size
+                ZStack {
+                    VStack(spacing: 16) {
+                        HStack {
+                            Spacer()
+                            NavigationLink(destination: SettingView()) {
+                                Image(systemName: "gearshape")
+                                    .modifier(iconExLarge())
+                                    .foregroundStyle(themeManager.selectedTheme.textLightSecondary)
+                                    .padding(.trailing, 27)
+                            }
+                        }
+                        Text(model.text.mainTitle)
+                            .modifier(mainTitle())
+                        Text(model.text.subTitle)
+                            .modifier(bodyRegular())
+                        SelfCardView(currentCard: $currentCard)
+                            .frame(height: size.height * 0.61 + 50)
+                            .padding(.bottom, 45)
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                .onAppear(perform: model.updateTitleText)
+                .background {
+                    Image(currentCard?.image ?? "bg1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .overlay(themeManager.selectedTheme.bgDimed)
+                        .blur(radius: 6)
+                        .padding(-20)
+                        .drawingGroup()
+                        .animation(.easeOut(duration: 1), value: currentCard)
+                }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea()
         }
     }
 }
@@ -41,26 +61,3 @@ struct ContentView: View {
     ContentView()
         .environment(ThemeManager())
 }
-
-
-
-
-// MARK: - 환경설정 불러오는 코드
-
-//import SwiftUI
-//
-//
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            NavigationView {
-//                NavigationLink("환경설정 링크", destination: SettingView())
-//            }
-//            
-//        }
-//    }
-//}
-//
-//#Preview {
-//    ContentView()
-//}

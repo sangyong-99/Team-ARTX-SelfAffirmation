@@ -20,4 +20,5 @@ struct WidgetSettingDiscriptionView: View {
 
 #Preview {
     WidgetSettingDiscriptionView()
+        .environment(ThemeManager())
 }

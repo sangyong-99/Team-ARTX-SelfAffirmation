@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingAlarmView: View {
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
+    @Environment(ThemeManager.self) private var themeManager
     
     var body: some View {
         VStack {
@@ -17,15 +18,15 @@ struct SettingAlarmView: View {
                 Toggle(isOn: $isAlarmActive, label: {
                     Text("알림 켜기")
                         .modifier(systemRegular())
-                        .foregroundColor(.textDarkPrimary)
+                        .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
                 })
-                .toggleStyle(SwitchToggleStyle(tint: Color.pointPrimary))
+                .toggleStyle(SwitchToggleStyle(tint: themeManager.selectedTheme.pointPrimary))
                 .padding(.horizontal, 16)
             }
             
             Spacer()
         }
-        .background(Color.tabBg)
+        .background(themeManager.selectedTheme.tabBg)
         
         .frame(height: 44)
         .cornerRadius(10)
