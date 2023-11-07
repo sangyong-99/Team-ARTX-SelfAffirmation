@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SettingAlarmView: View {
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     @Environment(ThemeManager.self) private var themeManager
+    var isToggleOn = false
     
     var body: some View {
         VStack {
@@ -20,6 +22,17 @@ struct SettingAlarmView: View {
                         .modifier(systemRegular())
                         .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
                 })
+                .onChange(of: isAlarmActive) { newValue in
+                    if newValue {
+                        // 알람을 예약하는 작업 수행
+                        NotificationManager().scheduleNotification(identifier: "첫번째 알람")
+                        print("알람 예약됨")
+                    } else {
+                        // 알람을 제거하는 작업 수행
+                        NotificationManager().removeNotification()
+                        print("알람 제거됨")
+                    }
+                }
                 .toggleStyle(SwitchToggleStyle(tint: themeManager.selectedTheme.pointPrimary))
                 .padding(.horizontal, 16)
             }
@@ -40,5 +53,6 @@ struct SettingAlarmView_Previews: PreviewProvider {
         SettingAlarmView()
             .previewLayout(.fixed(width: 341, height: 44))
             .padding()
+            .environment(ThemeManager())
     }
 }
