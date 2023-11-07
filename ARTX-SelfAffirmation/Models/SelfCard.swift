@@ -15,9 +15,9 @@ struct SelfCard: Identifiable, Hashable {
     var image: String
 }
 
-enum SelfCardImage: String, CaseIterable {
-    case bg1
-    case bg2
-    case bg3
-    case bg4
-}
+//enum SelfCardImage: String, CaseIterable {
+//    case bg1
+//    case bg2
+//    case bg3
+//    case bg4
+//}

@@ -6,13 +6,17 @@
 ////
 //
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     
     @Environment(ThemeManager.self) private var themeManager
+    @Environment(\.modelContext) private var context
+    @State private var currentCard: CardData?
+    @AppStorage("lastCard") private var lastCard: Int = 0
+    
     var model = TitleTextViewModel()
     
-    @State private var currentCard: SelfCard?
     
     var body: some View {
         NavigationStack {
@@ -40,9 +44,11 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 
-                .onAppear(perform: model.updateTitleText)
+                .onAppear {
+                    model.updateTitleText()
+                }
                 .background {
-                    Image(currentCard?.image ?? "bg1")
+                    Image(currentCard?.image ?? "bg\(lastCard)")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .overlay(themeManager.selectedTheme.bgDimed)
@@ -58,6 +64,11 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: CardData.self, configurations: configuration)
+    CardData.defaults.forEach { container.mainContext.insert($0) }
+    
+    return ContentView()
+        .modelContainer(container)
         .environment(ThemeManager())
 }
