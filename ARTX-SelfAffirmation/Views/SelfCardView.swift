@@ -14,6 +14,7 @@ struct SelfCardView: View {
     @Query(sort: [SortDescriptor(\CardData.image)]) private var selfCards: [CardData]
 //    var model = SelfCardViewModel()
     @AppStorage("lastCard") private var lastCard: Int = 0
+    @AppStorage("isLight") private var isLight: Bool = true
     
     @Binding var currentCard: CardData?
     
@@ -74,6 +75,11 @@ struct SelfCardView: View {
                 .frame(height: size.height, alignment: .top)
                 .onChange(of: currentCard) {
                     lastCard = currentCard!.id
+                    
+                    if currentCard!.isLight != isLight {
+                        isLight.toggle()
+                        themeManager.applyTheme(isLight ? 0 : 1)
+                    }
                 }
             }
             .scrollTargetBehavior(.viewAligned)

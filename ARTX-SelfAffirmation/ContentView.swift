@@ -14,6 +14,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var context
     @State private var currentCard: CardData?
     @AppStorage("lastCard") private var lastCard: Int = 0
+    @AppStorage("isLight") private var isLight: Bool = true
     
     var model = TitleTextViewModel()
     
@@ -35,8 +36,10 @@ struct ContentView: View {
                         }
                         Text(model.text.mainTitle)
                             .modifier(mainTitle())
+                            .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
                         Text(model.text.subTitle)
                             .modifier(bodyRegular())
+                            .foregroundStyle(themeManager.selectedTheme.textLightSecondary)
                         SelfCardView(currentCard: $currentCard)
                             .frame(height: size.height * 0.61 + 50)
                             .padding(.bottom, 45)
