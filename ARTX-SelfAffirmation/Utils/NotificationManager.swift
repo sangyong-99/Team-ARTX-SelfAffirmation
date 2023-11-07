@@ -48,7 +48,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     func scheduleNotification(identifier: String) {
         let content = UNMutableNotificationContent()
         content.title = "ARTX" // 알림 제목 설정
-        content.body = "명언 내용" // 알림 내용 설정
+        content.body = "나는 적절한 시간에 올바른 장소에 있고 올바른 일을 하고 있습니다" // 알림 내용 설정
         content.sound = UNNotificationSound.default
         
         var dateComponents = DateComponents()
