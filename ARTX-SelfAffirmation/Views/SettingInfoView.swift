@@ -44,11 +44,11 @@ struct SettingInfoRowView: View {
             HStack (spacing: 0) {
                 Text(cellTitle)
                     .modifier(systemRegular())
-                    .foregroundStyle(themeManager.selectedTheme.textDarkPrimary)
+                    .foregroundStyle(themeManager.selectedTheme.settingPrimary)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .modifier(systemRegular())
-                    .foregroundColor(themeManager.selectedTheme.textDarkSecondary)
+                    .foregroundColor(themeManager.selectedTheme.settingSecondary)
             }
             .frame(height: 44)
             .padding(.horizontal, 16)

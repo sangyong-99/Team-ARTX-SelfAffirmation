@@ -37,18 +37,18 @@ struct SettingView: View {
                     HStack(spacing: 0) {
                         Image(systemName: "bell.badge")
                             .modifier(iconRegular())
-                            .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                            .foregroundColor(themeManager.selectedTheme.settingPrimary)
                             .padding(.trailing, 8)
                         Text("알림 설정")
                             .modifier(headline())
-                            .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                            .foregroundColor(themeManager.selectedTheme.settingPrimary)
                         Spacer()
                     }
                     .padding(EdgeInsets(top: 30, leading: 26, bottom: 0, trailing: 0))
                     
                     Text("오전 9:00부터 오후 9:00까지 확언 알림을 보내드려요")
                         .modifier(caption())
-                        .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                        .foregroundColor(themeManager.selectedTheme.settingPrimary)
                         .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
                     
                     
@@ -64,18 +64,18 @@ struct SettingView: View {
                     HStack(spacing: 0) {
                         Image(systemName: "platter.filled.top.iphone")
                             .modifier(iconRegular())
-                            .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                            .foregroundColor(themeManager.selectedTheme.settingPrimary)
                             .padding(.trailing, 8)
                         Text("어플리케이션 정보")
                             .modifier(headline())
-                            .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                            .foregroundColor(themeManager.selectedTheme.settingPrimary)
                         Spacer()
                     }
                     .padding(.leading, 26)
                     
                     Text("위젯 설정법과 앱에 대한 추가 정보를 확인하세요")
                         .modifier(caption())
-                        .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                        .foregroundColor(themeManager.selectedTheme.settingPrimary)
                         .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
                     
                     SettingInfoView()

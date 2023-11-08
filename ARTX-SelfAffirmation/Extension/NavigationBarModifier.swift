@@ -22,7 +22,7 @@ struct NavigationBarModifier: ViewModifier {
             }) {
                 Image(systemName: "chevron.left") // Custom back button image
                     .font(.system(size: 17, weight: .semibold))
-                    .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                    .foregroundColor(themeManager.selectedTheme.textPrimary)
             }
             )
             .navigationBarTitleDisplayMode(.inline)

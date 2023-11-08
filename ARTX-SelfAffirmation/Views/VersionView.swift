@@ -19,7 +19,7 @@ struct VersionView: View {
                     Text("Developed by Team ARTX")
                 }
                 .modifier(caption())
-                .foregroundColor(themeManager.selectedTheme.textDarkSecondary)
+                .foregroundColor(themeManager.selectedTheme.settingSecondary)
                 .multilineTextAlignment(.center)
                 .lineSpacing(0)
             }

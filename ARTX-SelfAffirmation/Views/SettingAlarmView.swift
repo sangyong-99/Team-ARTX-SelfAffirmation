@@ -19,11 +19,12 @@ struct SettingAlarmView: View {
                 Toggle(isOn: $isAlarmActive, label: {
                     Text("알림 켜기")
                         .modifier(systemRegular())
-                        .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                        .foregroundColor(themeManager.selectedTheme.settingPrimary)
                 })
-                .onChange(of: isAlarmActive) { newValue in
-                    if newValue {
+                .onChange(of: isAlarmActive) {
+                    if isAlarmActive {
                         // 알람을 예약하는 작업 수행
+                        NotificationManager().requestAuthorization()
                         NotificationManager().scheduleNotification(identifier: "첫번째 알람")
                         print("알람 예약됨")
                     } else {

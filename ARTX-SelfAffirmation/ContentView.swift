@@ -31,16 +31,16 @@ struct ContentView: View {
                             NavigationLink(destination: SettingView()) {
                                 Image(systemName: "gearshape")
                                     .modifier(iconExLarge())
-                                    .foregroundStyle(themeManager.selectedTheme.textLightSecondary)
+                                    .foregroundStyle(themeManager.selectedTheme.textSecondary)
                                     .padding(.trailing, 27)
                             }
                         }
                         Text(model.text.mainTitle)
                             .modifier(mainTitle())
-                            .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
+                            .foregroundStyle(themeManager.selectedTheme.textPrimary)
                         Text(model.text.subTitle)
                             .modifier(bodyRegular())
-                            .foregroundStyle(themeManager.selectedTheme.textLightSecondary)
+                            .foregroundStyle(themeManager.selectedTheme.textSecondary)
                         SelfCardView(currentCard: $currentCard)
                             .frame(height: size.height * 0.61 + 50)
                             .padding(.bottom, 45)
@@ -49,7 +49,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .onAppear {
                     model.updateTitleText()
-                    NotificationManager().requestAuthorization()
+                    
                 }
 
                 .background {

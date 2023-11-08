@@ -35,6 +35,7 @@
 		B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0402AF38A9B00D521B5 /* Theme.swift */; };
 		B470F0432AF38AA500D521B5 /* Color+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0422AF38AA500D521B5 /* Color+Util.swift */; };
 		B470F0482AF38ECB00D521B5 /* SelfCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0472AF38ECB00D521B5 /* SelfCardView.swift */; };
+		B4F201F52AFB111700C93944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F201F42AFB111700C93944 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B470F0402AF38A9B00D521B5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B470F0422AF38AA500D521B5 /* Color+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Util.swift"; sourceTree = "<group>"; };
 		B470F0472AF38ECB00D521B5 /* SelfCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCardView.swift; sourceTree = "<group>"; };
+		B4F201F42AFB111700C93944 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		5E9BA29D2AF362C0004C24A9 /* ARTX-SelfAffirmation */ = {
 			isa = PBXGroup;
 			children = (
+				B4F201F32AFB111700C93944 /* Utils */,
 				5EB8E6942AF5E86700FD54C9 /* Extension */,
 				5EB8E68D2AF51E6700FD54C9 /* Info.plist */,
 				5EB8E6812AF51A8000FD54C9 /* AppFontFile */,
@@ -213,6 +216,14 @@
 			path = SwiftData;
 			sourceTree = "<group>";
 		};
+		B4F201F32AFB111700C93944 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B4F201F42AFB111700C93944 /* NotificationManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -309,6 +320,7 @@
 				B470F0482AF38ECB00D521B5 /* SelfCardView.swift in Sources */,
 				B46F7AA52AF65C2C0031B422 /* TitleTextViewModel.swift in Sources */,
 				B470F03F2AF38A9600D521B5 /* ThemeManager.swift in Sources */,
+				B4F201F52AFB111700C93944 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

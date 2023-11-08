@@ -95,11 +95,11 @@ struct SelfCardView: View {
             Text(card.title)
                 .modifier(quoteTitle())
                 .multilineTextAlignment(.center)
-                .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
+                .foregroundStyle(themeManager.selectedTheme.textPrimary)
             
             Text(card.name)
                 .modifier(namenote())
-                .foregroundStyle(themeManager.selectedTheme.textLightPrimary)
+                .foregroundStyle(themeManager.selectedTheme.textPrimary)
         })
     }
 }

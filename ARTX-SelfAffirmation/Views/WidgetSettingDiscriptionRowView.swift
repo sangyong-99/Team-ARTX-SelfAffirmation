@@ -21,14 +21,14 @@ struct WidgetSettingDiscriptionRowView: View {
                 .foregroundColor(themeManager.selectedTheme.pointPrimary)
                 Text("\(index)")
                     .modifier(iconSmall())
-                    .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                    .foregroundColor(themeManager.selectedTheme.settingPrimary)
                 
             }
             .padding(.trailing, 8)
             
             Text(description)
                 .modifier(headline())
-                .foregroundColor(themeManager.selectedTheme.textDarkPrimary)
+                .foregroundColor(themeManager.selectedTheme.settingPrimary)
         }
         .padding(.bottom, 16)
     }
