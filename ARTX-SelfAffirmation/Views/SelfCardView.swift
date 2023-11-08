@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SelfCardView: View {
     
     @Environment(ThemeManager.self) private var themeManager
-    var model = SelfCardViewModel()
+    @Query(sort: [SortDescriptor(\CardData.image)]) private var selfCards: [CardData]
+//    var model = SelfCardViewModel()
+    @AppStorage("lastCard") private var lastCard: Int = 0
+    @AppStorage("isLight") private var isLight: Bool = true
     
-    @Binding var currentCard: SelfCard?
+    @Binding var currentCard: CardData?
     
     var body: some View {
         
@@ -22,7 +26,7 @@ struct SelfCardView: View {
             
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0) {
-                    ForEach(model.selfCards, id:\.self) { card in
+                    ForEach(selfCards, id:\.self) { card in
                         // Parallax Effect
                         GeometryReader { proxy in
                             let cardSize = proxy.size
@@ -42,11 +46,17 @@ struct SelfCardView: View {
                                 .gesture(
                                     LongPressGesture(minimumDuration: 0.5, maximumDistance: 10)
                                         .onEnded { _ in
-                                            print("\(currentCard!.image) LongPressed ")
+                                            if let currentCard {
+                                                print("\(currentCard.image) LongPressed")
+                                            }
                                         }
                                 )
                                 .highPriorityGesture(TapGesture()
-                                    .onEnded { print("\(currentCard!.image) Tapped") }
+                                    .onEnded {
+                                        if let currentCard {
+                                            print("\(currentCard.image) Tapped")
+                                        }
+                                    }
                                 )
                         }
                         .padding(.horizontal, -4)
@@ -56,12 +66,20 @@ struct SelfCardView: View {
                                 .opacity(phase.isIdentity ? 1 : 0.7)
                         }
                     }
+                    .onAppear {
+                        currentCard = selfCards[lastCard]
+                    }
                 }
                 .padding(.horizontal, 36)
                 .scrollTargetLayout()
                 .frame(height: size.height, alignment: .top)
-                .onAppear {
-                    currentCard = model.selfCards[0]
+                .onChange(of: currentCard) {
+                    lastCard = currentCard!.id
+                    
+                    if currentCard!.isLight != isLight {
+                        isLight.toggle()
+                        themeManager.applyTheme(isLight ? 0 : 1)
+                    }
                 }
             }
             .scrollTargetBehavior(.viewAligned)
@@ -71,7 +89,7 @@ struct SelfCardView: View {
     }
     
     // MARK: - 카드 위에 올라가는 내용
-    func overlayView(_ card: SelfCard) -> some View {
+    func overlayView(_ card: CardData) -> some View {
         
         VStack(alignment: .center, spacing: 30, content: {
             Text(card.title)

@@ -26,15 +26,15 @@
 		5EB8E69C2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */; };
 		5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */; };
 		B42D5E392AF6C874001107FA /* View+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D5E382AF6C874001107FA /* View+Util.swift */; };
+		B42D5E3B2AFA4663001107FA /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D5E3A2AFA4663001107FA /* CardData.swift */; };
+		B42D5E3D2AFA5AAF001107FA /* CardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D5E3C2AFA5AAF001107FA /* CardContainer.swift */; };
 		B46F7AA32AF65AA90031B422 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F7AA22AF65AA90031B422 /* TitleText.swift */; };
 		B46F7AA52AF65C2C0031B422 /* TitleTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F7AA42AF65C2C0031B422 /* TitleTextViewModel.swift */; };
 		B470F03D2AF38A8D00D521B5 /* ThemeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */; };
 		B470F03F2AF38A9600D521B5 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F03E2AF38A9600D521B5 /* ThemeManager.swift */; };
 		B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0402AF38A9B00D521B5 /* Theme.swift */; };
 		B470F0432AF38AA500D521B5 /* Color+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0422AF38AA500D521B5 /* Color+Util.swift */; };
-		B470F0452AF38C7400D521B5 /* SelfCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0442AF38C7400D521B5 /* SelfCard.swift */; };
 		B470F0482AF38ECB00D521B5 /* SelfCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0472AF38ECB00D521B5 /* SelfCardView.swift */; };
-		B470F04A2AF3DDE800D521B5 /* SelfCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0492AF3DDE800D521B5 /* SelfCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,15 +59,15 @@
 		5EB8E69B2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionView.swift; sourceTree = "<group>"; };
 		5EB8E69D2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingDiscriptionRowView.swift; sourceTree = "<group>"; };
 		B42D5E382AF6C874001107FA /* View+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Util.swift"; sourceTree = "<group>"; };
+		B42D5E3A2AFA4663001107FA /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		B42D5E3C2AFA5AAF001107FA /* CardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainer.swift; sourceTree = "<group>"; };
 		B46F7AA22AF65AA90031B422 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		B46F7AA42AF65C2C0031B422 /* TitleTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextViewModel.swift; sourceTree = "<group>"; };
 		B470F03C2AF38A8D00D521B5 /* ThemeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollection.swift; sourceTree = "<group>"; };
 		B470F03E2AF38A9600D521B5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		B470F0402AF38A9B00D521B5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B470F0422AF38AA500D521B5 /* Color+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Util.swift"; sourceTree = "<group>"; };
-		B470F0442AF38C7400D521B5 /* SelfCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCard.swift; sourceTree = "<group>"; };
 		B470F0472AF38ECB00D521B5 /* SelfCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCardView.swift; sourceTree = "<group>"; };
-		B470F0492AF3DDE800D521B5 /* SelfCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +107,7 @@
 				5E9BA2AC2AF3636F004C24A9 /* Views */,
 				5E9BA2AD2AF36377004C24A9 /* Models */,
 				5E9BA2AE2AF363D8004C24A9 /* ViewModels */,
+				B4F201EF2AFAA1DD00C93944 /* SwiftData */,
 				5E9BA29E2AF362C0004C24A9 /* ARTX_SelfAffirmationApp.swift */,
 				5E9BA2A02AF362C0004C24A9 /* ContentView.swift */,
 				B470F03B2AF38A5F00D521B5 /* Resources */,
@@ -142,7 +143,6 @@
 		5E9BA2AD2AF36377004C24A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B470F0442AF38C7400D521B5 /* SelfCard.swift */,
 				B46F7AA22AF65AA90031B422 /* TitleText.swift */,
 			);
 			path = Models;
@@ -151,7 +151,6 @@
 		5E9BA2AE2AF363D8004C24A9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B470F0492AF3DDE800D521B5 /* SelfCardViewModel.swift */,
 				B46F7AA42AF65C2C0031B422 /* TitleTextViewModel.swift */,
 			);
 			path = ViewModels;
@@ -203,6 +202,15 @@
 				B470F0402AF38A9B00D521B5 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		B4F201EF2AFAA1DD00C93944 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				B42D5E3A2AFA4663001107FA /* CardData.swift */,
+				B42D5E3C2AFA5AAF001107FA /* CardContainer.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB8E6982AF5ECD900FD54C9 /* WidgetSettingView.swift in Sources */,
-				B470F0452AF38C7400D521B5 /* SelfCard.swift in Sources */,
 				5EB8E69E2AF5F0A100FD54C9 /* WidgetSettingDiscriptionRowView.swift in Sources */,
 				5EB8E6832AF51A9400FD54C9 /* AppFont.swift in Sources */,
 				B42D5E392AF6C874001107FA /* View+Util.swift in Sources */,
@@ -290,9 +297,10 @@
 				5EB8E68F2AF53ED000FD54C9 /* SettingAlarmView.swift in Sources */,
 				5E9BA29F2AF362C0004C24A9 /* ARTX_SelfAffirmationApp.swift in Sources */,
 				5EB8E6932AF5DAC600FD54C9 /* VersionView.swift in Sources */,
+				B42D5E3D2AFA5AAF001107FA /* CardContainer.swift in Sources */,
 				5EB8E69A2AF5EE5100FD54C9 /* NavigationBarModifier.swift in Sources */,
 				B470F0432AF38AA500D521B5 /* Color+Util.swift in Sources */,
-				B470F04A2AF3DDE800D521B5 /* SelfCardViewModel.swift in Sources */,
+				B42D5E3B2AFA4663001107FA /* CardData.swift in Sources */,
 				5EB8E6962AF5E8AC00FD54C9 /* UINavigationControllerExtension.swift in Sources */,
 				B46F7AA32AF65AA90031B422 /* TitleText.swift in Sources */,
 				5EB8E69C2AF5F08F00FD54C9 /* WidgetSettingDiscriptionView.swift in Sources */,
