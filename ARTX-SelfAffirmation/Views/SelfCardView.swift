@@ -12,7 +12,7 @@ struct SelfCardView: View {
     
     @Environment(ThemeManager.self) private var themeManager
     @Query(sort: [SortDescriptor(\CardData.image)]) private var selfCards: [CardData]
-//    var model = SelfCardViewModel()
+    //    var model = SelfCardViewModel()
     @AppStorage("lastCard") private var lastCard: Int = 0
     @AppStorage("isLight") private var isLight: Bool = true
     
@@ -25,7 +25,7 @@ struct SelfCardView: View {
             let size = geometry.size
             
             ScrollView(.horizontal) {
-                LazyHStack(spacing: 0) {
+                HStack(spacing: 0) {
                     ForEach(selfCards, id:\.self) { card in
                         // Parallax Effect
                         GeometryReader { proxy in
@@ -41,14 +41,14 @@ struct SelfCardView: View {
                                         overlayView(card)
                                         Button {
                                             let image = render(card: card, proxy: proxy)
-                                                shareImage(image: image)
+                                            shareImage(image: image)
                                             print("클릭")
                                         } label: {
                                             Image(systemName: "square.and.arrow.up")
                                                 .font(.system(size: 20, weight: .semibold))
                                                 .foregroundStyle(themeManager.selectedTheme.textPrimary)
                                         }
-
+                                        
                                     }
                                 }
                                 .offset(x: -minX)
@@ -89,24 +89,27 @@ struct SelfCardView: View {
     func overlayView(_ card: CardData) -> some View {
         
         VStack(alignment: .center, spacing: 30, content: {
-            Text(card.title)
-                .modifier(quoteTitle())
-                .multilineTextAlignment(.center)
-                .foregroundStyle(themeManager.selectedTheme.textPrimary)
-            
-            Text(card.name)
-                .modifier(namenote())
-                .foregroundStyle(themeManager.selectedTheme.textPrimary)
+            Group {
+                Text(card.title)
+                    .modifier(quoteTitle())
+                Text(card.name)
+                    .modifier(namenote())
+            }
+            .multilineTextAlignment(.center)
+            .foregroundStyle(themeManager.selectedTheme.textPrimary)
         })
     }
     
     @MainActor func render(card: CardData, proxy: GeometryProxy) -> UIImage  {
         let renderer = ImageRenderer(content: CardView(card: card, proxy: proxy))
         renderer.scale = 3.0
-        return renderer.uiImage!
+        
+        let image = cropImage(inputImage: renderer.uiImage!, toRect: CGRect(x: 0, y: 290, width: 954, height: 954), viewWidth: (renderer.uiImage?.size.width)!, viewHeight: (renderer.uiImage?.size.height)!)
+        
+        return image!
     }
-
-
+    
+    
     func CardView(card: CardData, proxy: GeometryProxy) -> some View {
         Image(card.image)
             .resizable()
@@ -117,13 +120,38 @@ struct SelfCardView: View {
                 overlayView(card)
             }
     }
-
+    
     func shareImage(image: UIImage) {
-        let textToShare: [Any] = [ MyActivityItemSource(image: image) ]
+        let textToShare: [Any] = [ MyActivityItemSource(image: image), image ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
     }
-
+    
+    func cropImage(inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
+    {
+        let imageViewScale = max(inputImage.size.width / viewWidth,
+                                 inputImage.size.height / viewHeight)
+        
+        
+        // Scale cropRect to handle images larger than shown-on-screen size
+        let cropZone = CGRect(x:cropRect.origin.x * imageViewScale,
+                              y:cropRect.origin.y * imageViewScale,
+                              width:cropRect.size.width * imageViewScale,
+                              height:cropRect.size.height * imageViewScale)
+        
+        
+        // Perform cropping in Core Graphics
+        guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to:cropZone)
+        else {
+            return nil
+        }
+        
+        
+        // Return image to UIImage
+        let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
+        return croppedImage
+    }
+    
 }
 
 #Preview {
