@@ -44,6 +44,7 @@ struct ContentView: View {
                     model.updateTitleText()
                     NotificationManager().requestAuthorization()
                 }
+
                 .background {
                     Image(currentCard?.image ?? "bg1")
                         .resizable()

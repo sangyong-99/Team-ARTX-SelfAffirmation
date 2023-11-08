@@ -11,7 +11,6 @@ import UserNotifications
 struct SettingAlarmView: View {
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     @Environment(ThemeManager.self) private var themeManager
-    var isToggleOn = false
     
     var body: some View {
         VStack {
@@ -33,6 +32,7 @@ struct SettingAlarmView: View {
                         print("알람 제거됨")
                     }
                 }
+
                 .toggleStyle(SwitchToggleStyle(tint: themeManager.selectedTheme.pointPrimary))
                 .padding(.horizontal, 16)
             }
