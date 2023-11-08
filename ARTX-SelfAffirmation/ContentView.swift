@@ -6,6 +6,7 @@
 ////
 //
 import SwiftUI
+import UserNotifications
 import SwiftData
 
 struct ContentView: View {
@@ -46,10 +47,11 @@ struct ContentView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
                 .onAppear {
                     model.updateTitleText()
+                    NotificationManager().requestAuthorization()
                 }
+
                 .background {
                     Image(currentCard?.image ?? "bg\(lastCard)")
                         .resizable()
