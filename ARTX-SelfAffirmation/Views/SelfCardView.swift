@@ -39,17 +39,20 @@ struct SelfCardView: View {
                                 .overlay {
                                     VStack {
                                         overlayView(card)
+                                            .frame(width: cardSize.width, height: cardSize.width)
+                                        Spacer()
                                         Button {
                                             let image = render(card: card, proxy: proxy)
                                             shareImage(image: image)
                                             print("클릭")
                                         } label: {
                                             Image(systemName: "square.and.arrow.up")
-                                                .font(.system(size: 20, weight: .semibold))
+                                                .modifier(iconExLarge())
                                                 .foregroundStyle(themeManager.selectedTheme.textPrimary)
                                         }
-                                        
+                                        .padding(.bottom, cardSize.height * 0.074)
                                     }
+                                    .padding(.top, cardSize.height * 0.13)
                                 }
                                 .offset(x: -minX)
                                 .clipShape(.rect(cornerRadius: 22))

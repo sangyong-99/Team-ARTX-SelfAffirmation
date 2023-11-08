@@ -9,7 +9,7 @@ import LinkPresentation
 
 class MyActivityItemSource: NSObject, UIActivityItemSource {
     var title = "Self Affirmation"
-    var text = "확언 공유하기"
+    var text = ""
     var image: UIImage
     
     init(image: UIImage) {
