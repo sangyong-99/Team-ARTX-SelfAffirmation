@@ -11,10 +11,10 @@ protocol Theme {
     var themeName: String { get set }
     
     var pageBg: LinearGradient { get set }
-    var textLightPrimary: Color { get set }
-    var textLightSecondary: Color { get set }
-    var textDarkPrimary: Color { get set }
-    var textDarkSecondary: Color { get set }
+    var textPrimary: Color { get set }
+    var textSecondary: Color { get set }
+    var settingPrimary: Color { get set }
+    var settingSecondary: Color { get set }
     var tabLine: Color { get set }
     var tabBg: Color { get set }
     var bgDimed: Color { get set }
