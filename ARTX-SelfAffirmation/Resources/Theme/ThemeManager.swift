@@ -13,8 +13,8 @@ final class ThemeManager {
     @ObservationIgnored @AppStorage("selectedTheme") var themeSelected = 0
     
     static let shared = ThemeManager()
-    public var themes: [Theme] = [DefaultTheme()]
-    var selectedTheme: Theme = DefaultTheme()
+    public var themes: [Theme] = [LightTheme(), DarkTheme()]
+    var selectedTheme: Theme = LightTheme()
     
     init() {
         getTheme()

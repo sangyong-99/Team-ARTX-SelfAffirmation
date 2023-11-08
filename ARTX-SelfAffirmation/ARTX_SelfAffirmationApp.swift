@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ARTX_SelfAffirmationApp: App {
+    
+    @AppStorage("isFirstTimeLaunch") private var isFirstTimeLaunch: Bool = true
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     @State private var themeManager = ThemeManager()
     
@@ -17,5 +20,6 @@ struct ARTX_SelfAffirmationApp: App {
             ContentView()
                 .environment(themeManager)
         }
+        .modelContainer(CardContainer.create(shouldCreateDefaults: &isFirstTimeLaunch))
     }
 }
