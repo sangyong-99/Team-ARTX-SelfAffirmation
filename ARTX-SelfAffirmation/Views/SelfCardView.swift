@@ -105,22 +105,27 @@ struct SelfCardView: View {
     
     @MainActor func render(card: CardData, proxy: GeometryProxy) -> UIImage  {
         let renderer = ImageRenderer(content: CardView(card: card, proxy: proxy))
+        
+        print(proxy.size.width)
+        print(proxy.size.height)
+        
         renderer.scale = 3.0
-        
-        let image = cropImage(inputImage: renderer.uiImage!, toRect: CGRect(x: 0, y: 290, width: 954, height: 954), viewWidth: (renderer.uiImage?.size.width)!, viewHeight: (renderer.uiImage?.size.height)!)
-        
-        return image!
+      
+        let image = cropImage(inputImage: renderer.uiImage!, toRect: CGRect(x: 0, y: 514 * 0.4, width: 318 * renderer.scale, height: 318 * renderer.scale), viewWidth: (renderer.uiImage?.size.width)!, viewHeight: (renderer.uiImage?.size.height)!)
+            
+            return image!
     }
+        
     
     
     func CardView(card: CardData, proxy: GeometryProxy) -> some View {
         Image(card.image)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: proxy.size.width * 2.2)
-            .frame(width: proxy.size.width, height: proxy.size.height)
+            .frame(width: 318, height: 514)
             .overlay {
                 overlayView(card)
+                    .padding(.bottom, 55)
             }
     }
     
@@ -153,6 +158,10 @@ struct SelfCardView: View {
         // Return image to UIImage
         let croppedImage: UIImage = UIImage(cgImage: cutImageRef)
         return croppedImage
+    }
+    
+    func isIPhoneSE() -> Bool {
+        return UIDevice.current.model == "iPhone SE"
     }
     
 }
