@@ -7,10 +7,12 @@
 
 import SwiftUI
 import UserNotifications
+import SwiftData
 
 struct SettingAlarmView: View {
     @AppStorage("isAlarmActive") var isAlarmActive: Bool = false
     @Environment(ThemeManager.self) private var themeManager
+    @Query private var selfCards: [CardData]
     
     var body: some View {
         VStack {
@@ -25,7 +27,7 @@ struct SettingAlarmView: View {
                     if isAlarmActive {
                         // 알람을 예약하는 작업 수행
                         NotificationManager().requestAuthorization()
-                        NotificationManager().scheduleNotification(identifier: "첫번째 알람")
+                        NotificationManager().scheduleNotification(identifier: "첫번째 알림", affirmation: selfCards)
                         print("알람 예약됨")
                     } else {
                         // 알람을 제거하는 작업 수행
