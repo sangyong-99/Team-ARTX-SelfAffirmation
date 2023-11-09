@@ -25,10 +25,11 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     
     //알림 함수 - 안쓰고 밑에거 쓸거임
     func scheduleNotification() {
+        
         //content - 알림에 필요한 메세지의 기본속성을 설정하는 역할
         let content = UNMutableNotificationContent()
         content.title = "ARTX" // 알림 제목 설정
-        content.body = "명언 내용" // 알림 내용 설정
+        content.body = "안쓸거임" // 알림 내용 설정
         content.sound = UNNotificationSound.default
         
         // trigger - time 발동 조건 관리 timeInterval은 초단위
@@ -45,15 +46,17 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     }
     
     //시간 받아서 알림쓰는 함수 - 이거 사용할거임, identifier는 시간별로 여러번 보낼 경우, 알림 구별할려고 사용
-    func scheduleNotification(identifier: String) {
+    func scheduleNotification(identifier: String, affirmation: Array<CardData>) {
+        let randomNotificationContent = getRandomNotificationContent(affirmation: affirmation)
+        
         let content = UNMutableNotificationContent()
         content.title = "ARTX" // 알림 제목 설정
-        content.body = "나는 적절한 시간에 올바른 장소에 있고 올바른 일을 하고 있습니다" // 알림 내용 설정
+        content.body = randomNotificationContent // 알림 내용 설정
         content.sound = UNNotificationSound.default
         
         var dateComponents = DateComponents()
         dateComponents.hour = 9
-        dateComponents.minute = 30
+        dateComponents.minute = 00
         
         //let components = Calendar.current.dateComponents([.hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
@@ -77,6 +80,10 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     //알림 전부 삭제 - on/off에선 이게 더 편해서 사용, uikit프로젝트처럼 notification으로 정보 보내는게 없어서 사용하기 편함
     func removeNotification() {
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
+    
+    func getRandomNotificationContent(affirmation: Array<CardData>) -> String {
+        return affirmation.randomElement()?.title ?? "명언 없음"
     }
 }
 

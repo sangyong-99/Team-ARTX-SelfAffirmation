@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct SettingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(ThemeManager.self) private var themeManager
+    
     
     init() {
         NavigationBarModifier().navigationColorSetting()
