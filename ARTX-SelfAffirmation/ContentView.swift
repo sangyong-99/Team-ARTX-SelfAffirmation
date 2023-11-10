@@ -25,25 +25,31 @@ struct ContentView: View {
             GeometryReader { geometry in
                 let size = geometry.size
                 ZStack {
-                    VStack(spacing: 16) {
+                    VStack() {
                         HStack {
                             Spacer()
                             NavigationLink(destination: SettingView()) {
                                 Image(systemName: "gearshape")
                                     .modifier(iconExLarge())
                                     .foregroundStyle(themeManager.selectedTheme.textSecondary)
-                                    .padding(.trailing, 27)
                             }
+                            .padding(.trailing, 27)
                         }
+                        .padding(.top, size.height * 0.07)
+                        .ignoresSafeArea()
+                        Spacer()
+                        
                         Text(model.text.mainTitle)
                             .modifier(mainTitle())
                             .foregroundStyle(themeManager.selectedTheme.textPrimary)
+                            .padding(.bottom, 16)
                         Text(model.text.subTitle)
                             .modifier(bodyRegular())
                             .foregroundStyle(themeManager.selectedTheme.textSecondary)
+                            .padding(.bottom, 24)
                         SelfCardView(currentCard: $currentCard)
                             .frame(height: size.height * 0.61 + 50)
-                            .padding(.bottom, 45)
+                            .padding(.bottom, size.height * 0.08)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -53,7 +59,7 @@ struct ContentView: View {
                 }
 
                 .background {
-                    Image(currentCard?.image ?? "bg\(lastCard)")
+                    Image(currentCard?.image ?? "img\(lastCard)")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .overlay(themeManager.selectedTheme.bgDimed)
@@ -61,6 +67,7 @@ struct ContentView: View {
                         .padding(-20)
                         .drawingGroup()
                         .animation(.easeOut(duration: 1), value: currentCard)
+                        .ignoresSafeArea()
                 }
             }
             .ignoresSafeArea()
@@ -76,4 +83,5 @@ struct ContentView: View {
     return ContentView()
         .modelContainer(container)
         .environment(ThemeManager())
+        .environment(\.locale, .init(identifier: "en"))
 }

@@ -7,6 +7,7 @@
 
 import UserNotifications
 import Foundation
+import SwiftUI
 
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     let notificationCenter = UNUserNotificationCenter.current()
@@ -83,7 +84,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     }
     
     func getRandomNotificationContent(affirmation: Array<CardData>) -> String {
-        return affirmation.randomElement()?.title ?? "명언 없음"
+        return NSLocalizedString(affirmation.randomElement()!.title, comment: "Localized String")
     }
 }
 

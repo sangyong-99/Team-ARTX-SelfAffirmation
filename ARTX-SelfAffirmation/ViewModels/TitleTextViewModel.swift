@@ -21,16 +21,16 @@ final class TitleTextViewModel {
         formatter.dateFormat = "HH"
         let hour = Int(formatter.string(from: Date())) ?? 9
         
-        var greeting: String {
+        var greeting: LocalizedStringResource {
             switch hour {
             case 6..<12:
                 return "좋은 아침이에요!"
             case 12..<18:
-                return "좋은 오후에요!"
+                return "행복한 오후에요!"
             case 18..<22:
-                return "좋은 저녁이에요!"
+                return "평온한 저녁이에요!"
             default:
-                return "잘자요"
+                return "오늘도 수고 많았어요"
             }
         }
         text.mainTitle = greeting
