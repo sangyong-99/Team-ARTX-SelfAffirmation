@@ -75,11 +75,6 @@ struct SettingView: View {
                     }
                     .padding(.leading, 26)
                     
-                    Text("위젯 설정법과 앱에 대한 추가 정보를 확인하세요")
-                        .modifier(caption())
-                        .foregroundColor(themeManager.selectedTheme.settingPrimary)
-                        .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
-                    
                     SettingInfoView()
                         .padding(.top, 18)
                     
