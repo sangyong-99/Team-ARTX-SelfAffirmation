@@ -106,7 +106,6 @@
 			children = (
 				B4F201F32AFB111700C93944 /* Utils */,
 				5EB8E6942AF5E86700FD54C9 /* Extension */,
-				5EB8E6812AF51A8000FD54C9 /* AppFontFile */,
 				5EB8E6802AF51A7A00FD54C9 /* Fonts */,
 				5E9BA2AC2AF3636F004C24A9 /* Views */,
 				5E9BA2AD2AF36377004C24A9 /* Models */,
@@ -171,13 +170,6 @@
 				5EB8E6882AF51E3A00FD54C9 /* Pretendard-SemiBold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		5EB8E6812AF51A8000FD54C9 /* AppFontFile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AppFontFile;
 			sourceTree = "<group>";
 		};
 		5EB8E6942AF5E86700FD54C9 /* Extension */ = {

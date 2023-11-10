@@ -92,7 +92,7 @@ struct SelfCardView: View {
         
         VStack(alignment: .center, spacing: 30, content: {
             Group {
-                Text(LocalizedStringKey(card.title))
+                Text(NSLocalizedString(card.title, comment: "card title"))
                     .modifier(quoteTitle())
                 Text(card.name)
                     .modifier(namenote())
@@ -116,7 +116,6 @@ struct SelfCardView: View {
     }
         
     
-    
     func CardView(card: CardData, proxy: GeometryProxy) -> some View {
         Image(card.image)
             .resizable()
@@ -124,6 +123,7 @@ struct SelfCardView: View {
             .frame(width: 318, height: 514)
             .overlay {
                 overlayView(card)
+                    .frame(width: proxy.size.width * 0.86, height: proxy.size.width)
                     .padding(.bottom, 55)
             }
     }
