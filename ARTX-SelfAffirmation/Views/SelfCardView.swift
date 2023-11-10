@@ -39,12 +39,11 @@ struct SelfCardView: View {
                                 .overlay {
                                     VStack {
                                         overlayView(card)
-                                            .frame(width: cardSize.width, height: cardSize.width)
+                                            .frame(width: cardSize.width * 0.86, height: cardSize.width)
                                         Spacer()
                                         Button {
                                             let image = render(card: card, proxy: proxy)
                                             shareImage(image: image)
-                                            print("클릭")
                                         } label: {
                                             Image(systemName: "square.and.arrow.up")
                                                 .modifier(iconExLarge())
@@ -60,7 +59,7 @@ struct SelfCardView: View {
                                 .contentShape(Rectangle())
                         }
                         .padding(.horizontal, -4)
-                        .frame(width: size.width - 72, height: size.height - 50)
+                        .frame(width: size.width * 0.815, height: size.height - 50)
                         .scrollTransition(.interactive, axis: .horizontal) { view, phase in view
                                 .scaleEffect(phase.isIdentity ? 1 : 0.85)
                                 .opacity(phase.isIdentity ? 1 : 0.7)
@@ -167,6 +166,11 @@ struct SelfCardView: View {
 }
 
 #Preview {
-    ContentView()
+    let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: CardData.self, configurations: configuration)
+    CardData.defaults.forEach { container.mainContext.insert($0) }
+    
+    return ContentView()
+        .modelContainer(container)
         .environment(ThemeManager())
 }
