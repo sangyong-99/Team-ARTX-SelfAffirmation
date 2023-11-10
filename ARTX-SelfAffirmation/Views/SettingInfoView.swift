@@ -13,17 +13,7 @@ struct SettingInfoView: View {
     var body: some View {
         VStack (spacing: 0) {
             
-            NavigationLink(destination: WidgetSettingView()) {
-                SettingInfoRowView(cellTitle: "위젯 설정 방법")
-            }
-            
-            Divider()
-                .overlay(themeManager.selectedTheme.tabLine)
-                .padding(.leading, 16)
-            
-            Button(action: {
-                print("궁금")
-            }, label: {
+            Link(destination: URL(string: "https://artx.imweb.me/")!, label: {
                 SettingInfoRowView(cellTitle: "궁금한 점이 있으신가요?")
             })
             
@@ -59,6 +49,7 @@ struct SettingInfoView_Previews: PreviewProvider {
     static var previews: some View {
         SettingInfoView()
             .previewLayout(.sizeThatFits)
+            .environment(ThemeManager())
         //            .padding()
     }
 }
