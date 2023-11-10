@@ -1,6 +1,26 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
+    " %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "%lld" : {
       "localizations" : {
         "en" : {
@@ -32,7 +52,7 @@
       }
     },
     "그 어떤 것도 빛을 어둡게 할 수 없습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -43,7 +63,7 @@
       }
     },
     "나는 가장 위대하다. 나는 내가 그런 줄 알기도 전에 그렇게 말했다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -54,7 +74,7 @@
       }
     },
     "나는 신중하고 아무것도 두렵지 않습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -65,7 +85,7 @@
       }
     },
     "나는 적절한 시간에 올바른 장소에 있고 올바른 일을 하고 있습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -76,7 +96,7 @@
       }
     },
     "당신은 단지 당신의 있는 그대로의 존재로, 단지 존재하는걸로 사랑 받습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -87,7 +107,7 @@
       }
     },
     "당신의 관점은 독특합니다. 그것은 중요하고, 가치 있습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -98,7 +118,7 @@
       }
     },
     "당신의 내면은 당신이 인생의 모든 것을 만들고 할 수 있도록 도와줍니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -109,7 +129,7 @@
       }
     },
     "당신의 인생은 놀랍습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -120,7 +140,7 @@
       }
     },
     "매력의 비결은 자신을 사랑하는 것입니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -131,7 +151,7 @@
       }
     },
     "명언 없음" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -141,12 +161,13 @@
         }
       }
     },
-    "버전 정보 Ver 1.0" : {
+    "버전 정보 Ver" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Version Info. 1.0"
+            "value" : "Version Info"
           }
         }
       }
@@ -172,7 +193,7 @@
       }
     },
     "어디에 있든지 사랑하고 사랑받을 기회는 존재합니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -217,13 +238,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "We send you random confirmation notifications at 9:00 a.m."
+            "value" : "We send you a random confirmation notification at 9:00 am"
           }
         }
       }
     },
     "완벽한 순간은 지금 이 순간입니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -234,7 +255,7 @@
       }
     },
     "용기는 우리가 우리 자신을 보여주는 것에서부터 시작됩니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -255,7 +276,7 @@
       }
     },
     "의식하는 호흡은 저의 닻입니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -266,7 +287,7 @@
       }
     },
     "인생의 밝은 면을 들여다보면 아무도 죽지 않았다고 생각합니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -277,7 +298,7 @@
       }
     },
     "자기 관리, 자기 가치 및 자기 가치를 지원하지 않는 결정에 잘 벗어났습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -288,7 +309,7 @@
       }
     },
     "전에 없던 사태에 대비해 길을 만들고, 현실이 재배치되는 것을 지켜봅니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -299,7 +320,7 @@
       }
     },
     "제가 충분한가요? 네, 그렇습니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -320,7 +341,7 @@
       }
     },
     "지구 위의 모든 날은 좋은 날입니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -331,7 +352,7 @@
       }
     },
     "찬란한 날에 마음을 열고 술을 마시라" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -352,7 +373,7 @@
       }
     },
     "할 수 없다고 생각되는 일을 해야 합니다" : {
-      "extractionState" : "stale",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {

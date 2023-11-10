@@ -11,11 +11,16 @@ struct VersionView: View {
     @Environment(ThemeManager.self) private var themeManager
     
     var body: some View {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        
         HStack(spacing: 0) {
             Spacer()
             VStack(spacing: 0) {
                 Group {
-                    Text("버전 정보 Ver 1.0")
+                    HStack(spacing: 0) {
+                        Text("버전 정보 Ver")
+                        Text(" \(appVersion ?? "1.0")")
+                    }
                     Text("Developed by Team ARTX")
                 }
                 .modifier(caption())
