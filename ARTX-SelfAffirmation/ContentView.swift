@@ -59,7 +59,7 @@ struct ContentView: View {
                 }
 
                 .background {
-                    Image(currentCard?.image ?? "bg\(lastCard)")
+                    Image(currentCard?.image ?? "img\(lastCard)")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .overlay(themeManager.selectedTheme.bgDimed)
@@ -83,4 +83,5 @@ struct ContentView: View {
     return ContentView()
         .modelContainer(container)
         .environment(ThemeManager())
+        .environment(\.locale, .init(identifier: "en"))
 }

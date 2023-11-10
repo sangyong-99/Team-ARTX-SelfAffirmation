@@ -92,7 +92,7 @@ struct SelfCardView: View {
         
         VStack(alignment: .center, spacing: 30, content: {
             Group {
-                Text(card.title)
+                Text(LocalizedStringKey(card.title))
                     .modifier(quoteTitle())
                 Text(card.name)
                     .modifier(namenote())

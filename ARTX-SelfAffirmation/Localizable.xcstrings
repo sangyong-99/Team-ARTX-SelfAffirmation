@@ -1,0 +1,387 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "Developed by Team ARTX" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developed by Team ARTX"
+          }
+        }
+      }
+    },
+    "궁금한 점이 있으신가요?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you have any question?"
+          }
+        }
+      }
+    },
+    "그 어떤 것도 빛을 어둡게 할 수 없습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing can dim the light that shines from within"
+          }
+        }
+      }
+    },
+    "나는 가장 위대하다. 나는 내가 그런 줄 알기도 전에 그렇게 말했다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I am the greatest. I said that even before I knew I was"
+          }
+        }
+      }
+    },
+    "나는 신중하고 아무것도 두렵지 않습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I am deliberate and afraid of nothing"
+          }
+        }
+      }
+    },
+    "나는 적절한 시간에 올바른 장소에 있고 올바른 일을 하고 있습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I am in the right place at the right time, doing the right thing"
+          }
+        }
+      }
+    },
+    "당신은 단지 당신의 있는 그대로의 존재로, 단지 존재하는걸로 사랑 받습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You are loved just for being who you are, just for existing"
+          }
+        }
+      }
+    },
+    "당신의 관점은 독특합니다. 그것은 중요하고, 가치 있습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your perspective is unique. It’s important and it counts"
+          }
+        }
+      }
+    },
+    "당신의 내면은 당신이 인생의 모든 것을 만들고 할 수 있도록 도와줍니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Who you are inside is what helps you make and do everything in life"
+          }
+        }
+      }
+    },
+    "당신의 인생은 놀랍습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your life is about to be incredible"
+          }
+        }
+      }
+    },
+    "매력의 비결은 자신을 사랑하는 것입니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The secret of attraction is to love yourself"
+          }
+        }
+      }
+    },
+    "명언 없음" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No affirmation"
+          }
+        }
+      }
+    },
+    "버전 정보 Ver 1.0" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version Info. 1.0"
+          }
+        }
+      }
+    },
+    "알림 설정" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification Setting"
+          }
+        }
+      }
+    },
+    "알림 켜기" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on notification"
+          }
+        }
+      }
+    },
+    "어디에 있든지 사랑하고 사랑받을 기회는 존재합니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The chance to love and be loved exists no matter where you are"
+          }
+        }
+      }
+    },
+    "어플리케이션 정보" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Application Information"
+          }
+        }
+      }
+    },
+    "오늘도 긍정 확언과 함께 목표를 향해 열심히 달려봐요!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Work towards your goals with self affirmation!"
+          }
+        }
+      }
+    },
+    "오늘도 수고 많았어요" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good Night!"
+          }
+        }
+      }
+    },
+    "오전 9:00에 랜덤한 확언 알림을 보내드려요" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We send you random confirmation notifications at 9:00 a.m."
+          }
+        }
+      }
+    },
+    "완벽한 순간은 지금 이 순간입니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The perfect moment is this one"
+          }
+        }
+      }
+    },
+    "용기는 우리가 우리 자신을 보여주는 것에서부터 시작됩니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Courage starts with showing up and letting ourselves be seen"
+          }
+        }
+      }
+    },
+    "위젯 설정 방법" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setting up widget"
+          }
+        }
+      }
+    },
+    "의식하는 호흡은 저의 닻입니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conscious breathing is my anchor"
+          }
+        }
+      }
+    },
+    "인생의 밝은 면을 들여다보면 아무도 죽지 않았다고 생각합니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I say looking on the bright side of life never killed anybody"
+          }
+        }
+      }
+    },
+    "자기 관리, 자기 가치 및 자기 가치를 지원하지 않는 결정에 잘 벗어났습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good riddance to decisions that don't support self-care, self-value, and self-worth"
+          }
+        }
+      }
+    },
+    "전에 없던 사태에 대비해 길을 만들고, 현실이 재배치되는 것을 지켜봅니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Make way for the unprecedented and watch your reality rearrange itself"
+          }
+        }
+      }
+    },
+    "제가 충분한가요? 네, 그렇습니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Am I good enough? Yes I am"
+          }
+        }
+      }
+    },
+    "좋은 아침이에요!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good Morning!"
+          }
+        }
+      }
+    },
+    "지구 위의 모든 날은 좋은 날입니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Every day above earth is a good day"
+          }
+        }
+      }
+    },
+    "찬란한 날에 마음을 열고 술을 마시라" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open your heart and drink in the glorious day"
+          }
+        }
+      }
+    },
+    "평온한 저녁이에요!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good Evening!"
+          }
+        }
+      }
+    },
+    "할 수 없다고 생각되는 일을 해야 합니다" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Who you are inside is what helps you make and do everything in life"
+          }
+        }
+      }
+    },
+    "행복한 오후에요!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Happy Afternoon!"
+          }
+        }
+      }
+    },
+    "환경 설정" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preference"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

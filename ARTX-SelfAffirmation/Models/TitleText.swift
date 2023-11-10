@@ -8,6 +8,6 @@
 import SwiftUI
 
 struct TitleText {
-    var mainTitle: String
-    var subTitle: String
+    var mainTitle: LocalizedStringResource
+    var subTitle: LocalizedStringResource
 }

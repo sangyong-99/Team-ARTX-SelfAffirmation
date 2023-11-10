@@ -28,7 +28,7 @@ struct SettingInfoView: View {
 struct SettingInfoRowView: View {
     @Environment(ThemeManager.self) private var themeManager
     
-    var cellTitle: String
+    var cellTitle: LocalizedStringResource
     
     var body: some View {
             HStack (spacing: 0) {
