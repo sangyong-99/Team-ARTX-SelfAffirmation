@@ -48,7 +48,7 @@ struct SettingView: View {
                     }
                     .padding(EdgeInsets(top: 30, leading: 26, bottom: 0, trailing: 0))
                     
-                    Text("오전 9:00부터 오후 9:00까지 확언 알림을 보내드려요")
+                    Text("오전 9:00에 랜덤한 확언 알림을 보내드려요")
                         .modifier(caption())
                         .foregroundColor(themeManager.selectedTheme.settingPrimary)
                         .padding(EdgeInsets(top: 10, leading: 26, bottom: 0, trailing: 0))
