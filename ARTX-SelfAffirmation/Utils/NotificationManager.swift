@@ -46,7 +46,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     }
     
     //시간 받아서 알림쓰는 함수 - 이거 사용할거임, identifier는 시간별로 여러번 보낼 경우, 알림 구별할려고 사용
-    func scheduleNotification(identifier: String, affirmation: Array<CardData>) {
+    func scheduleNotification(identifier: String, affirmation: Array<CardData>, hour: Int, minute: Int) {
         let randomNotificationContent = getRandomNotificationContent(affirmation: affirmation)
         
         let content = UNMutableNotificationContent()
@@ -55,8 +55,8 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         content.sound = UNNotificationSound.default
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 9
-        dateComponents.minute = 00
+        dateComponents.hour = hour
+        dateComponents.minute = minute
         
         //let components = Calendar.current.dateComponents([.hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)

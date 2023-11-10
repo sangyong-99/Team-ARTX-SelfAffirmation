@@ -27,7 +27,7 @@ struct SettingAlarmView: View {
                     if isAlarmActive {
                         // 알람을 예약하는 작업 수행
                         NotificationManager().requestAuthorization()
-                        NotificationManager().scheduleNotification(identifier: "첫번째 알림", affirmation: selfCards)
+                        NotificationManager().scheduleNotification(identifier: "첫번째 알림", affirmation: selfCards, hour: 9, minute: 00)
                         print("알람 예약됨")
                     } else {
                         // 알람을 제거하는 작업 수행
