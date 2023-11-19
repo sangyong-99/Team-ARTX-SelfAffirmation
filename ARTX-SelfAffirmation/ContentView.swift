@@ -66,7 +66,7 @@ struct ContentView: View {
                         .blur(radius: 6)
                         .padding(-20)
                         .drawingGroup()
-                        .animation(.easeOut(duration: 1), value: currentCard)
+                        .animation(.easeOut(duration: 0.5), value: currentCard)
                         .ignoresSafeArea()
                 }
             }

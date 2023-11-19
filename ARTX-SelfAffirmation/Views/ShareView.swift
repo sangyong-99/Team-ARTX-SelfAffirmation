@@ -8,7 +8,7 @@
 import LinkPresentation
 
 class MyActivityItemSource: NSObject, UIActivityItemSource {
-    var title = "Self Affirmation"
+    var title = "Awake"
     var text = ""
     var image: UIImage
     
