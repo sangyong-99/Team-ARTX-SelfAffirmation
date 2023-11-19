@@ -36,6 +36,7 @@ struct SelfCardView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: proxy.size.width * 2.2)
                                 .frame(width: cardSize.width, height: cardSize.height)
+                                .offset(x: -minX)
                                 .overlay {
                                     VStack {
                                         overlayView(card)
@@ -53,8 +54,8 @@ struct SelfCardView: View {
                                     }
                                     .padding(.top, cardSize.height * 0.13)
                                 }
-                                .offset(x: -minX)
                                 .clipShape(.rect(cornerRadius: 22))
+                                .drawingGroup()
                                 .shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 16)
                                 .contentShape(Rectangle())
                         }
@@ -74,12 +75,12 @@ struct SelfCardView: View {
                 .frame(height: size.height, alignment: .top)
                 .onChange(of: currentCard) {
                     lastCard = currentCard!.id
-                    
                     if currentCard!.isLight != isLight {
                         isLight.toggle()
                         themeManager.applyTheme(isLight ? 0 : 1)
                     }
                 }
+                .sensoryFeedback(.impact(flexibility: .soft, intensity: 1.0), trigger: lastCard)
             }
             .scrollTargetBehavior(.viewAligned)
             .scrollIndicators(.hidden)
