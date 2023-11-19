@@ -83,5 +83,5 @@ struct ContentView: View {
     return ContentView()
         .modelContainer(container)
         .environment(ThemeManager())
-        .environment(\.locale, .init(identifier: "en"))
+//        .environment(\.locale, .init(identifier: "en"))
 }
