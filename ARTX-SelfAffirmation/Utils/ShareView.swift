@@ -9,7 +9,7 @@ import LinkPresentation
 
 class MyActivityItemSource: NSObject, UIActivityItemSource {
     var title = "Awake"
-    var text = ""
+    var text = "긍정 확언을 공유해보세요"
     var image: UIImage
     
     init(image: UIImage) {
@@ -18,17 +18,25 @@ class MyActivityItemSource: NSObject, UIActivityItemSource {
     }
     
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
-        return text
+        return image
     }
     
     func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
-        return text
+        if let activityType {
+            if activityType.rawValue.contains("Instagram") {
+                return image
+            } else {
+                return [text, image]
+            }
+        } else {
+            return image
+        }
     }
     
     func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
         return title
     }
-
+    
     func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
         let metadata = LPLinkMetadata()
         metadata.title = title
@@ -36,5 +44,5 @@ class MyActivityItemSource: NSObject, UIActivityItemSource {
         metadata.originalURL = URL(fileURLWithPath: text)
         return metadata
     }
-
+    
 }
