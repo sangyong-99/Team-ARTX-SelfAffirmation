@@ -132,7 +132,20 @@ struct SelfCardView: View {
     func shareImage(image: UIImage) {
         let textToShare: [Any] = [ MyActivityItemSource(image: image), image ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+        
+        activityViewController.completionWithItemsHandler = { (activityType, completed, items, error) in
+            if let error = error {
+                print("ActivityViewController Error: \(error)")
+            } else if completed, let activityType = activityType, activityType.rawValue == "com.instagram.exclusivegram" {
+                if let viewController = UIApplication.shared.windows.first?.rootViewController {
+                    InstagramActivity.shared.shareToInstagram(image: image, from: viewController)
+                }
+            }
+        }
+        
+        if let viewController = UIApplication.shared.windows.first?.rootViewController {
+            viewController.present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     func cropImage(inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?
