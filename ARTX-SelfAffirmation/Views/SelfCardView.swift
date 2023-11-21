@@ -86,7 +86,15 @@ struct SelfCardView: View {
             .scrollIndicators(.hidden)
             .scrollPosition(id: $currentCard)
         }
+        .onAppear {
+            if (isLight) {
+                themeManager.applyTheme(0);
+            } else {
+                themeManager.applyTheme(1);
+            }
+        }
     }
+    
     
     // MARK: - 카드 위에 올라가는 내용
     func overlayView(_ card: CardData) -> some View {

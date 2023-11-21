@@ -29,10 +29,12 @@ final class LightTheme: DefaultTheme, Theme {
     var themeName: String = "Light Theme"
     var textPrimary = Color(hex: "262626")
     var textSecondary = Color(hex: "262626", opacity: 0.7)
+    var textDeactive = Color(hex: "262626", opacity: 0.35)
 }
 
 final class DarkTheme: DefaultTheme, Theme {
     var themeName: String = "Dark Theme"
     var textPrimary = Color(hex: "F7F7F7")
     var textSecondary = Color(hex: "F7F7F7", opacity: 0.7)
+    var textDeactive = Color(hex: "F7F7F7", opacity: 0.35)
 }

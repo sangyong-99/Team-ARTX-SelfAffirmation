@@ -11,6 +11,19 @@
         }
       }
     },
+
+    "%@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+
     "%lld" : {
       "localizations" : {
         "en" : {

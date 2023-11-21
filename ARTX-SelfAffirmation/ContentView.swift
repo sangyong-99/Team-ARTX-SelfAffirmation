@@ -28,11 +28,11 @@ struct ContentView: View {
                     VStack() {
                         HStack {
                             Spacer()
-                            NavigationLink(destination: SettingView()) {
-                                Image(systemName: "gearshape")
-                                    .modifier(iconExLarge())
-                                    .foregroundStyle(themeManager.selectedTheme.textSecondary)
-                            }
+//                            NavigationLink(destination: SettingView()) {
+//                                Image(systemName: "gearshape")
+//                                    .modifier(iconExLarge())
+//                                    .foregroundStyle(themeManager.selectedTheme.textSecondary)
+//                            }
                             .padding(.trailing, 27)
                         }
                         .padding(.top, size.height * 0.07)
