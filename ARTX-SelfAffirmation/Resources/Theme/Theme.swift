@@ -13,6 +13,7 @@ protocol Theme {
     var pageBg: LinearGradient { get set }
     var textPrimary: Color { get set }
     var textSecondary: Color { get set }
+    var textDeactive:Color { get set }
     var settingPrimary: Color { get set }
     var settingSecondary: Color { get set }
     var tabLine: Color { get set }

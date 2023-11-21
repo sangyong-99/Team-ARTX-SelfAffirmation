@@ -74,7 +74,6 @@ struct SelfCardView: View {
                 .frame(height: size.height, alignment: .top)
                 .onChange(of: currentCard) {
                     lastCard = currentCard!.id
-                    
                     if currentCard!.isLight != isLight {
                         isLight.toggle()
                         themeManager.applyTheme(isLight ? 0 : 1)
@@ -85,7 +84,15 @@ struct SelfCardView: View {
             .scrollIndicators(.hidden)
             .scrollPosition(id: $currentCard)
         }
+        .onAppear {
+            if (isLight) {
+                themeManager.applyTheme(0);
+            } else {
+                themeManager.applyTheme(1);
+            }
+        }
     }
+    
     
     // MARK: - 카드 위에 올라가는 내용
     func overlayView(_ card: CardData) -> some View {
