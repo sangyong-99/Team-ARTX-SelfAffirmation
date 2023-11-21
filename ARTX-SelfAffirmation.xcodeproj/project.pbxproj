@@ -37,6 +37,7 @@
 		B470F0412AF38A9B00D521B5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0402AF38A9B00D521B5 /* Theme.swift */; };
 		B470F0432AF38AA500D521B5 /* Color+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0422AF38AA500D521B5 /* Color+Util.swift */; };
 		B470F0482AF38ECB00D521B5 /* SelfCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B470F0472AF38ECB00D521B5 /* SelfCardView.swift */; };
+		B4EF1F032B0A67AA008D56A1 /* InstagramActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF1F022B0A67AA008D56A1 /* InstagramActivity.swift */; };
 		B4F201F52AFB111700C93944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F201F42AFB111700C93944 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		B470F0402AF38A9B00D521B5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B470F0422AF38AA500D521B5 /* Color+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Util.swift"; sourceTree = "<group>"; };
 		B470F0472AF38ECB00D521B5 /* SelfCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfCardView.swift; sourceTree = "<group>"; };
+		B4EF1F022B0A67AA008D56A1 /* InstagramActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramActivity.swift; sourceTree = "<group>"; };
 		B4F201F42AFB111700C93944 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +146,6 @@
 				5EB8E68E2AF53ED000FD54C9 /* SettingAlarmView.swift */,
 				5EB8E6902AF553F200FD54C9 /* SettingInfoView.swift */,
 				B470F0472AF38ECB00D521B5 /* SelfCardView.swift */,
-				4A3201492AFBB1AA0048977B /* ShareView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				B4F201F42AFB111700C93944 /* NotificationManager.swift */,
+				4A3201492AFBB1AA0048977B /* ShareView.swift */,
+				B4EF1F022B0A67AA008D56A1 /* InstagramActivity.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				5E9BDFF02AF504D60000542E /* SettingView.swift in Sources */,
 				B470F0482AF38ECB00D521B5 /* SelfCardView.swift in Sources */,
 				B46F7AA52AF65C2C0031B422 /* TitleTextViewModel.swift in Sources */,
+				B4EF1F032B0A67AA008D56A1 /* InstagramActivity.swift in Sources */,
 				B470F03F2AF38A9600D521B5 /* ThemeManager.swift in Sources */,
 				B4F201F52AFB111700C93944 /* NotificationManager.swift in Sources */,
 			);

@@ -21,7 +21,9 @@ final class ThemeManager {
     }
     
     public func applyTheme(_ theme: Int) {
-        self.selectedTheme = self.themes[theme]
+        withAnimation(.easeOut(duration: 0.5)) {
+            self.selectedTheme = self.themes[theme]
+        }
         self.themeSelected = theme
     }
     

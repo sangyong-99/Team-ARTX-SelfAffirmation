@@ -36,6 +36,7 @@ struct SelfCardView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: proxy.size.width * 2.2)
                                 .frame(width: cardSize.width, height: cardSize.height)
+                                .offset(x: -minX)
                                 .overlay {
                                     VStack {
                                         overlayView(card)
@@ -53,8 +54,8 @@ struct SelfCardView: View {
                                     }
                                     .padding(.top, cardSize.height * 0.13)
                                 }
-                                .offset(x: -minX)
                                 .clipShape(.rect(cornerRadius: 22))
+                                .drawingGroup()
                                 .shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 16)
                                 .contentShape(Rectangle())
                         }
@@ -79,6 +80,7 @@ struct SelfCardView: View {
                         themeManager.applyTheme(isLight ? 0 : 1)
                     }
                 }
+                .sensoryFeedback(.impact(flexibility: .soft, intensity: 1.0), trigger: lastCard)
             }
             .scrollTargetBehavior(.viewAligned)
             .scrollIndicators(.hidden)
@@ -138,7 +140,20 @@ struct SelfCardView: View {
     func shareImage(image: UIImage) {
         let textToShare: [Any] = [ MyActivityItemSource(image: image), image ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+        
+        activityViewController.completionWithItemsHandler = { (activityType, completed, items, error) in
+            if let error = error {
+                print("ActivityViewController Error: \(error)")
+            } else if completed, let activityType = activityType, activityType.rawValue == "com.instagram.exclusivegram" {
+                if let viewController = UIApplication.shared.windows.first?.rootViewController {
+                    InstagramActivity.shared.shareToInstagram(image: image, from: viewController)
+                }
+            }
+        }
+        
+        if let viewController = UIApplication.shared.windows.first?.rootViewController {
+            viewController.present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     func cropImage(inputImage: UIImage, toRect cropRect: CGRect, viewWidth: CGFloat, viewHeight: CGFloat) -> UIImage?

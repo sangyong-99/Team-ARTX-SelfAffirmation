@@ -11,6 +11,7 @@
         }
       }
     },
+
     "%@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -22,6 +23,7 @@
         }
       }
     },
+
     "%lld" : {
       "localizations" : {
         "en" : {
